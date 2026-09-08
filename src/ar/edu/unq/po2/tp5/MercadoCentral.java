@@ -6,7 +6,7 @@ import java.util.List;
 public class MercadoCentral {
 
 	private List<Producto> productos = new ArrayList<Producto>();
-	private Caja caja = new Caja();
+	private CajaDeVenta caja = new CajaDeVenta();
 	
 	public void ingresarProducto(Producto producto) {
 		
