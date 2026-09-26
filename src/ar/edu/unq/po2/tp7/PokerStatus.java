@@ -5,20 +5,20 @@ import java.util.ArrayList;
 
 public class PokerStatus {
 
-	public String verificar(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
+	public Jugada verificar(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
 		
 		List<Carta> cartas = new ArrayList<Carta>(List.of(carta1, carta2, carta3, carta4, carta5));
 		
 		if (esPoker(cartas)) {
-			return "POKER";
+			return new JugadaPoker(cartas);
 		} else if (esColor(cartas)) {
-			return "COLOR";
+			return new JugadaColor(cartas);
 		}
 		else if (esTrio(cartas)) {
-			return "TRIO";
+			return new JugadaTrio(cartas);
 		}
 		
-		return "NADA";
+		return new JugadaNada(cartas);
 		
 	}
 
