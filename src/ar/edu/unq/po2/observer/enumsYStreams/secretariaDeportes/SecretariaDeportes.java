@@ -57,4 +57,11 @@ public class SecretariaDeportes {
 
 	}
 
+	public void imprimirActividades() {
+
+		actividades.stream()
+			.forEach(a -> System.out.println(a));
+		
+	}
+
 }
